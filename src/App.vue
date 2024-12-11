@@ -49,6 +49,8 @@ const setTab = (tab) => {
           <div class="space-x-4">
             <button @click="setTab(1)" :class="{'proj-btn-active': activeTab === 1, 'proj-btn-inactive': activeTab !== 1}">AAC</button>
             <button @click="setTab(2)" :class="{'proj-btn-active': activeTab === 2, 'proj-btn-inactive': activeTab !== 2}">ESO</button>
+            <button @click="setTab(3)" :class="{'proj-btn-active': activeTab === 3, 'proj-btn-inactive': activeTab !== 3}">VOA</button>
+            <button @click="setTab(4)" :class="{'proj-btn-active': activeTab === 4, 'proj-btn-inactive': activeTab !== 4}">DRB</button>
           </div>
           
           <!-- Tab 1 -->
@@ -56,7 +58,8 @@ const setTab = (tab) => {
             <div class="space-y-2">
               <p class="font-semibold text-sky-400">Frontend</p>
               <p class="text-xl">Another Anime Collection</p>
-              <p class="text-lg text-zinc-400">A basic anime progress tracking website that allows you to bookmark your anime and be able to update your bookmark status, episodes watched, and score your anime.</p>
+              <p class="text-lg text-zinc-400">A basic anime progress tracking website that allows you to bookmark your anime and be able to 
+                update your bookmark status, episodes watched, and score your anime.</p>
             </div>
             <div class="space-y-2 py-4 lg:py-0">
               <img class="mx-auto" src="https://skillicons.dev/icons?i=js,html,css,tailwind,vue" alt="">
@@ -74,7 +77,9 @@ const setTab = (tab) => {
             <div class="space-y-2">
               <p class="font-semibold text-sky-400">Fullstack</p>
               <p class="text-xl">Evaluation System for Organization</p>
-              <p class="text-lg text-zinc-400">A system designed for organizations where both employers and employees can evaluate themselves. In a team-based structure, team members assess their own performance, while the team leader evaluates all team members, including themselves.</p>
+              <p class="text-lg text-zinc-400">A system designed for organizations where both employers and employees can evaluate themselves. 
+                In a team-based structure, team members assess their own performance, 
+                while the team leader evaluates all team members, including themselves.</p>
             </div>
             <div class="space-y-2 py-4 lg:py-0">
               <img class="mx-auto" src="https://skillicons.dev/icons?i=laravel,php,js,html,css,tailwind,vue" alt="">
@@ -84,6 +89,44 @@ const setTab = (tab) => {
             <div class="lg:space-x-4 space-y-2 lg:space-y-0 lg:flex">
               <img class="object-cover w-full h-full lg:w-[40rem] rounded-md proj-img-prev" src="/src/assets/images/eso-1.png" alt="">
               <img class="object-cover w-full h-full lg:w-[40rem] rounded-md proj-img-prev lg:self-center" src="/src/assets/images/eso-2.png" alt="">
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div v-if="activeTab === 3" class="mt-4 grid grid-cols-1 lg:grid-cols-2 space-y-2">
+            <div class="space-y-2">
+              <p class="font-semibold text-sky-400">Unity</p>
+              <p class="text-xl">Vocabuary the Adventure</p>
+              <p class="text-lg text-zinc-400">A game where players have to kill the monsters using a correct vocabulary. Usually the game will teach you some basic knowledge; 
+                the player can ignore this knowledge entirely, and there will be some punishment so that the player will have to remember vocab to pass to the next stage.</p>
+            </div>
+            <div class="space-y-2 py-4 lg:py-0">
+              <img class="mx-auto" src="https://skillicons.dev/icons?i=cs,unity" alt="">
+            </div>
+          </div>
+          <div v-if="activeTab === 3" class="absolute left-1/2 transform -translate-x-1/2 max-w-2xl lg:max-w-7xl w-full mx-auto my-10">
+            <div class="lg:space-x-4 space-y-2 lg:space-y-0 lg:flex">
+              <img class="object-cover w-full h-full lg:w-[40rem] rounded-md proj-img-prev" src="/src/assets/images/voa-1.png" alt="">
+              <img class="object-cover w-full h-full lg:w-[40rem] rounded-md proj-img-prev lg:self-center" src="/src/assets/images/voa-2.png" alt="">
+            </div>
+          </div>
+
+          <!-- Tab 4 -->
+          <div v-if="activeTab === 4" class="mt-4 grid grid-cols-1 lg:grid-cols-2 space-y-2">
+            <div class="space-y-2">
+              <p class="font-semibold text-sky-400">Predictive Model</p>
+              <p class="text-xl">Classification of Driving Behaviors</p>
+              <p class="text-lg text-zinc-400">This research was part of data classification and clustering course. The research focuses on developing predictive models to classify driving behavior by mainly using the
+                Orange Data Mining program. Using existing data from kaggle.</p>
+            </div>
+            <div class="space-y-2 py-4 lg:py-0">
+              <img class="mx-auto" src="https://skillicons.dev/icons?i=py,tensorflow" alt="">
+            </div>
+          </div>
+          <div v-if="activeTab === 4" class="absolute left-1/2 transform -translate-x-1/2 max-w-2xl lg:max-w-7xl w-full mx-auto my-10">
+            <div class="lg:space-x-4 space-y-2 lg:space-y-0 lg:flex">
+              <img class="object-cover w-full h-full lg:w-[40rem] rounded-md proj-img-prev" src="/src/assets/images/drb-1.png" alt="">
+              <img class="object-cover w-full h-full lg:w-[40rem] rounded-md proj-img-prev lg:self-center" src="/src/assets/images/drb-2.png" alt="">
             </div>
           </div>
 
